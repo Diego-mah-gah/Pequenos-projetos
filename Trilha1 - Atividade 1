@@ -1,0 +1,89 @@
+public class Aluno {
+    private String nome;
+    private Academia academia;
+    private String idade;
+    private String peso;
+    private String altura;
+
+    public Aluno(String nome, Academia academia, String idade, String peso, String altura){
+        this.nome = nome;
+        this.academia = academia;
+        this.idade = idade;
+        this.peso = peso;
+        this.altura = altura;
+    }
+
+
+    public Aluno(String nome, Academia prix) {
+    }
+
+            public String obterNome(String s){
+             return nome;
+    }
+
+             public String obterAcademia(){
+                 return academia.obterNome();
+    }
+
+            public int obterIdade1(){
+                  return - 16;
+    }
+
+            public int obterIdade2(){
+                 return - 25;
+    }
+
+            public int obterPeso1(){
+                return - 86;
+    }
+
+            public int obterPeso2() {
+                return -64;
+    }
+
+            public double obterAltura1(){
+                return 1.84;
+    }
+
+            public double obterAltura2() {
+                 return 1.54;
+    }
+}
+
+
+
+public class Academia {
+    private String nome;
+
+    public Academia(String nome){
+        this.nome = nome;
+    }
+
+    public String obterNome(){
+        return nome;
+    }
+
+}
+
+
+
+public static void main() {
+    Academia prix = new Academia("Prix");
+    Academia ctprix = new Academia("CT Prix");
+
+    Aluno Pedro = new Aluno("Pedro Felipe, ", prix);
+    Aluno Joao = new Aluno("Joao Henrique ", ctprix);
+
+    System.out.println(" Pedro Felipe tem a idade" + Pedro.obterIdade1());
+    System.out.println(" Joao Henrique tem a idade" + Joao.obterIdade2());
+
+    System.out.println(" e peso" + Pedro.obterPeso1());
+    System.out.println(" e peso" + Joao.obterPeso2());
+
+    System.out.println(" com altura de " +Pedro.obterAltura1());
+    System.out.println(" com altura de " +Joao.obterAltura2());
+
+    System.out.println(Pedro.obterNome(" e treina na: ") + Pedro.obterAcademia());
+    System.out.println(Joao.obterNome(" e treina na: ") + Joao.obterAcademia());
+
+}
