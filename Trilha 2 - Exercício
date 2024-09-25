@@ -1,0 +1,44 @@
+public class Main {
+    public static void main(String[] args) {
+        Universidade princeton = new Universidade("Princeton");
+        Universidade cambridge = new Universidade( "Cambridge");
+
+        Pessoa albertEinstein = new Pessoa("Albert Einstein", princeton);
+        Pessoa isaacNewton = new Pessoa("Isaac Newton", cambridge);
+
+        System.out.println(albertEinstein.obterNome() + " trabalhou na universidade " + albertEinstein.obterUniversidade());
+        System.out.println(isaacNewton.obterNome() + " trabalhou na universidade " + isaacNewton.obterUniversidade());
+    }
+}
+
+
+public class Universidade {
+    private String nome;
+
+    public Universidade(String nome) {
+        this.nome = nome;
+    }
+
+    public String obterNome() {
+        return nome;
+    }
+}
+
+
+public class Pessoa {
+    private String nome;
+    private Universidade universidade;
+
+    public Pessoa(String nome, Universidade universidade) {
+        this.nome = nome;
+        this.universidade = universidade;
+    }
+
+    public String obterNome() {
+        return nome;
+    }
+
+    public String obterUniversidade() {
+        return universidade.obterNome();
+    }
+}
